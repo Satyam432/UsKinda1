@@ -28,7 +28,7 @@ All personal copy lives in `src/config/story.ts`. Change `recipientName` only if
 
 ## GitHub Pages deployment
 
-1. Create a GitHub repository and push this root project to its `main` branch (do not push `pro1/` if it is unrelated).
+1. Open a terminal in the `UsKinda1` directory, create a GitHub repository, and push this project to its `main` branch.
 2. In **Settings → Pages**, choose **GitHub Actions** as the source.
 3. The workflow installs with `npm ci`, type-checks, tests, builds, uploads `dist`, and deploys with the official Pages actions.
 4. The URL is normally `https://USERNAME.github.io/REPOSITORY/`. Vite derives the repository base path from `GITHUB_REPOSITORY`; no username is hardcoded.

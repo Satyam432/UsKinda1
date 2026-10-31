@@ -4,7 +4,3 @@ dist/
 vite.config.js
 vite.config.d.ts
 .DS_Store
-
-# Existing unrelated workspace projects
-pro1/
-pro2/
