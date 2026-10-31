@@ -136,5 +136,44 @@
  .timeline button svg,.timeline button .dice{width:40px;height:40px;padding:9px}
  .phrase-list{grid-template-columns:1fr}
 }
+/* Responsive audit overrides: independent safe areas, touch targets, and tablet density. */
+.topbar{padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+.tools button{width:44px;height:44px;min-width:44px;min-height:44px}
+.scene>div{min-width:0;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+.nav{padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+.nav button{min-width:44px;min-height:44px}
+.roast-zone button,.phrase-list button{min-height:44px}
+@media(max-width:700px){
+ html,body,#root{width:100%;max-width:100%;overflow-x:visible}
+ .story{overflow-x:clip}
+ .topbar{padding-left:max(10px,env(safe-area-inset-left));padding-right:max(10px,env(safe-area-inset-right))}
+ .tools button{width:44px;height:44px}
+ .scene>div{padding-left:max(16px,env(safe-area-inset-left))!important;padding-right:max(16px,env(safe-area-inset-right))!important}
+ .nav{padding-left:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right))}
+ .folder,.indictment,.transcript,.bubble,.tea-dialogue,.listening,.contract,.split,.machine,.classified-file,.letter,.final-card,.secret-grid{min-width:0;max-width:100%}
+ .folder-front,.paper-stack,.classified-file,.letter article,.final-card{overflow-wrap:anywhere}
+ .timeline button,.question-grid button,.roast-zone button,.phrase-list button,.secret-grid button{touch-action:manipulation}
+ .witness,.night-desk,.roast-zone{max-width:100%}
+ .desk-items{position:absolute;inset:0;overflow:clip;pointer-events:none}
+}
+@media(max-width:350px){
+ .tools button{width:44px;height:44px}
+ .scene>div{padding-left:max(12px,env(safe-area-inset-left))!important;padding-right:max(12px,env(safe-area-inset-right))!important}
+ .brand{max-width:104px;white-space:normal;line-height:1.15}
+}
+@media(min-width:701px) and (max-width:900px){
+ .scene>div{padding-left:max(28px,env(safe-area-inset-left));padding-right:max(28px,env(safe-area-inset-right))}
+ .scene h1{font-size:clamp(42px,7vw,58px)}
+ .timeline{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}
+ .timeline:before{display:none}
+ .timeline button{min-width:0;min-height:150px;border:1px solid #ffffff18;border-radius:14px;padding:16px}
+ .question-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .question-grid button{min-width:0;min-height:88px}
+ .witness{max-width:680px}
+ .contract{margin-left:24px!important;margin-right:24px!important}
+ .phrase-list{max-width:680px;margin-left:auto;margin-right:auto}
+ .classified-file{max-width:680px}
+ .secret-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 .no-motion *,.no-motion *:before,.no-motion *:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
