@@ -1,0 +1,1 @@
+export function DefendantAvatar({mood='neutral',onClick}:{mood?:string;onClick?:()=>void}){return <button aria-label="Tap the defendant" onClick={onClick} className={`avatar ${mood}`}><span className="hair"/><span className="eye e1"/><span className="eye e2"/><span className="mouth"/><span className="sweat">◜</span><span className="avatar-heart">♥</span></button>}
